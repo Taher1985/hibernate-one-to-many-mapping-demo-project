@@ -107,6 +107,12 @@ public class Instructor {
 		course.setInstructor(this);
 	}
 
+	public void delete(List<Course> course) {
+		for (Course course2 : course) {
+			course2.setInstructor(null);
+		}
+	}
+
 	@Override
 	public String toString() {
 		return "Instructor [id=" + id + ", firstName=" + firstName + ", last_name=" + last_name + ", email=" + email
